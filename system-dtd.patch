@@ -1,0 +1,11 @@
+--- ws-jaxme/src/documentation/manual/jaxme2.xml.orig	2008-08-15 13:21:21.882649810 -0400
++++ ws-jaxme/src/documentation/manual/jaxme2.xml	2008-08-15 13:21:44.684648635 -0400
+@@ -17,7 +17,7 @@
+ 
+ -->
+ <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+-                  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
++                  "@DOCBOOKX_DTD@" [
+   <!ENTITY address SYSTEM "address.xml">
+   <!ENTITY addressxsd SYSTEM "addressxsd.xml">
+   <!ENTITY faq SYSTEM "faq.xml">

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: javax.xml.bind
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-Version: 2.0.0.v20080604-1500
+Bundle-Vendor: %providerName
+Export-Package: javax.xml.bind;version="2.0.0",javax.xml.bind.annotati
+ on;version="2.0.0",javax.xml.bind.annotation.adapters;version="2.0.0"
+ ,javax.xml.bind.attachment;version="2.0.0",javax.xml.bind.helpers;ver
+ sion="2.0.0",javax.xml.bind.util;version="2.0.0"

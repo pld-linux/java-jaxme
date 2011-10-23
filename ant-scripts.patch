@@ -1,0 +1,92 @@
+--- ./ant/js.xml.sav	2005-08-12 03:39:29.000000000 -0400
++++ ./ant/js.xml	2007-02-12 12:31:25.000000000 -0500
+@@ -34,15 +34,15 @@
+     <property name="src.js" location="${basedir}/src/js"/>
+ 
+     <path id="js.class.path">
+-      <pathelement location="${preqs}/log4j-1.2.8.jar"/>
+-      <pathelement location="${preqs}/ant-1.5.4.jar"/>
++      <pathelement location="${preqs}/log4j.jar"/>
++      <pathelement location="${preqs}/ant.jar"/>
+       <pathelement location="${preqs}/junit.jar"/>
+       <pathelement location="${preqs}/antlr.jar"/>
+     </path>
+ 
+     <path id="js.test.path">
+         <path refid="js.class.path"/>
+-        <pathelement location="${preqs}/hsqldb-1.7.1.jar"/>
++        <pathelement location="${preqs}/hsqldb.jar"/>
+         <pathelement location="${dist}/jaxmejs-${version}.jar"/>
+         <pathelement location="${build.js.test.classes}"/>
+     </path>
+@@ -129,6 +129,7 @@
+     </target>
+ 
+     <target name="JS.generate.version" depends="JS.generate.db">
++        
+         <versionGenerator
+                    driver="${jdbc.driver}"
+                       url="${jdbc.url}"
+--- ./ant/pm.xml.sav	2005-08-12 03:39:29.000000000 -0400
++++ ./ant/pm.xml	2007-02-12 12:31:25.000000000 -0500
+@@ -37,11 +37,11 @@
+         <pathelement location="${dist}/jaxmexs-${version}.jar"/>
+         <pathelement location="${dist}/jaxme2-${version}.jar"/>
+         <pathelement location="${preqs}/beaver.jar"/>   
+-        <pathelement location="${preqs}/hsqldb-1.7.1.jar"/>
++        <pathelement location="${preqs}/hsqldb.jar"/>
+         <pathelement location="${preqs}/ant.jar"/>
+-        <pathelement location="${preqs}/xml-apis.jar"/>
+-        <pathelement location="${preqs}/xercesImpl.jar"/>
+-        <pathelement location="${preqs}/xmldb-api-20021118.jar"/>
++        <pathelement location="${preqs}/xml-commons-apis.jar"/>
++        <pathelement location="${preqs}/xerces-j2.jar"/>
++        <pathelement location="${preqs}/xmldb-api.jar"/>
+         <!-- These aren't in the CVS and aren't necessary for the build -->
+         <pathelement location="${preqs}/TaminoAPI4J.jar"/>
+         <pathelement location="${preqs}/TaminoJCA.jar"/>
+--- ./ant/jm.xml.sav	2005-08-12 03:39:29.000000000 -0400
++++ ./ant/jm.xml	2007-02-12 12:31:41.000000000 -0500
+@@ -34,9 +34,10 @@
+       <pathelement location="${dist}/jaxmejs-${version}.jar"/>
+       <pathelement location="${dist}/jaxmexs-${version}.jar"/>
+       <pathelement location="${preqs}/ant.jar"/>
+-      <pathelement location="${preqs}/xml-apis.jar"/>
++      <pathelement location="${preqs}/xml-commons-apis.jar"/>
+       <pathelement location="${preqs}/beaver.jar"/>
+       <pathelement location="${preqs}/antlr.jar"/>
++      <pathelement location="${preqs}/commons-codec.jar"/>
+     </path>
+ 
+     <path id="jaxme.test.path">
+--- ./ant/xs.xml.sav	2005-08-12 03:39:29.000000000 -0400
++++ ./ant/xs.xml	2007-02-12 12:31:25.000000000 -0500
+@@ -23,7 +23,7 @@
+     <property name="src.xs" location="${basedir}/src/xs"/>
+ 
+     <path id="xs.class.path">
+-        <pathelement location="${preqs}/xml-apis.jar"/>
++        <pathelement location="${preqs}/xml-commons-apis.jar"/>
+         <pathelement location="${preqs}/junit.jar"/>
+         <pathelement location="${dist}/jaxmeapi-${version}.jar"/>
+     </path>
+@@ -48,7 +48,7 @@
+         <path id="xs.test.path">
+             <path refid="xs.class.path"/>
+             <pathelement location="${dist}/jaxmexs-${version}.jar"/>
+-            <pathelement location="${preqs}/xercesImpl.jar"/>
++            <pathelement location="${preqs}/xerces-j2.jar"/>
+         </path>
+         <runtests reportsdir="${build.xs.reports}" classpathref="xs.test.path">
+             <tests>
+--- ./ant/api.xml.sav	2005-08-12 03:39:29.000000000 -0400
++++ ./ant/api.xml	2007-02-12 12:31:25.000000000 -0500
+@@ -25,7 +25,7 @@
+     </target>
+    
+     <path id="api.class.path">
+-        <pathelement location="${preqs}/xml-apis.jar"/>
++        <pathelement location="${preqs}/xml-commons-apis.jar"/>
+     </path>
+ 
+     <target name="API.compile" depends="init">

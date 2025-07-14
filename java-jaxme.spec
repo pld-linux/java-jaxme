@@ -95,12 +95,12 @@ Group:		Documentation
 %setup -q -n ws-%{srcname}
 find -name "*.jar" | xargs rm -v
 
-%patch0 -p0
-%patch1 -p0
-%patch2 -p1
-%patch3 -p1
-%patch4 -p0
-%patch5 -p0
+%patch -P0 -p0
+%patch -P1 -p0
+%patch -P2 -p1
+%patch -P3 -p1
+%patch -P4 -p0
+%patch -P5 -p0
 
 DOCBOOKX_DTD=$(%{_bindir}/xmlcatalog /usr/share/sgml/docbook/xml-dtd-4.5/catalog.xml "-//OASIS//DTD DocBook XML V4.5//EN")
 %{__sed} -i -e 's|@DOCBOOKX_DTD@|$DOCBOOKX_DTD|' src/documentation/manual/jaxme2.xml
